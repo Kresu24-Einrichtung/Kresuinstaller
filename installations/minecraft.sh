@@ -31,11 +31,12 @@ elif ! [ -d "$ndir" ]; then
 echo "Dieses Verzeichnis existiert nicht Installation abgebrochen!"
 exit 1
 elif [ -d "$ndir" ]; then
+echo "→ Verzeichnis gefunden!"
 elif ! [ java -version 2>&1 >/dev/null | grep "java version\|openjdk version" ]; then
-    apt install openjdk-16-jre -y
-    java -version
-    echo "→ Java 16 wurde erfolgreich Installiert! Bitte starte die Installation neu!"
-    exit 1
+apt install openjdk-16-jre -y
+java -version
+echo "→ Java 16 wurde erfolgreich Installiert! Bitte starte die Installation neu!"
+exit 1
 else
 cd $ndir
 wget https://launcher.mojang.com/v1/objects/3cf24a8694aca6267883b17d934efacc5e44440d/server.jar
