@@ -31,12 +31,11 @@ elif ! [ -d "$ndir" ]; then
 echo "Dieses Verzeichnis existiert nicht Installation abgebrochen!"
 exit 1
 elif [ -d "$ndir" ]; then
-if ! [ -n `which java` ]; then
+elif ! [ -n `which java` ]; then
     apt install openjdk-16-jre -y
     java -version
     echo "→ Java 16 wurde erfolgreich Installiert! Bitte starte die Installation neu!"
     exit 1
-elif [ -x "$(command java -v)" ]; then
 cd $ndir
 wget https://launcher.mojang.com/v1/objects/3cf24a8694aca6267883b17d934efacc5e44440d/server.jar
 echo "eule=true">> eula.txt
