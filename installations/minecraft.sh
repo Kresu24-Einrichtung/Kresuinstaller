@@ -41,9 +41,9 @@ read number
 if [ $number -eq 1 ]; then
 echo "Installation wird ausgeführt, dies kann einen moment dauern!"
 check_if_dir()
-wget https://launcher.mojang.com/v1/objects/3cf24a8694aca6267883b17d934efacc5e44440d/server.jar
+sudo wget https://launcher.mojang.com/v1/objects/3cf24a8694aca6267883b17d934efacc5e44440d/server.jar
 echo "eule=true">> eula.txt
 echo "java -Xmx1024M -Xms1024M -jar server.jar nogui">> start.sh
-chmod 777 start.sh
+sudo chmod 777 start.sh
 echo "Installation abgeschlossen!"
 fi
