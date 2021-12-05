@@ -24,10 +24,11 @@ echo "[5] - Installation von Apache 2 - Nesting nicht aktiv!"
 echo "[6] - Installation von Apache 2 - Nesting aktiv!"
 echo "[7] - Installation von Java 8"
 echo "[8] - Installation von Java 16"
-echo "[9] - Installation von Node.JS 16"
-echo "[10] - Installation von Nginx Webserver"
-echo "[11] - Installation von Docker - Nesting muss Aktiv sein!"
-echo "[12] - Minecraft Server Installer"
+echo "[9] - Installation von Java 18"
+echo "[10] - Installation von Node.JS 16"
+echo "[11] - Installation von Nginx Webserver"
+echo "[12] - Installation von Docker - Nesting muss Aktiv sein!"
+echo "[13] - Minecraft Server Installer"
 
 read number
 if [ $number -eq 1 ]; then
@@ -97,13 +98,21 @@ sudo apt install adoptopenjdk-16-hotspot
 echo "→ Java 16 wurde erfolgreich Installiert!"
 elif [ $number -eq 9 ]; then
 sudo apt update
+sudo apt install apt-transport-https ca-certificates wget dirmngr gnupg software-properties-common
+wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+sudo apt update
+sudo apt install adoptopenjdk-18-hotspot
+echo "→ Java 18 wurde erfolgreich Installiert!"
+elif [ $number -eq 10 ]; then
+sudo apt update
 sudo apt install curl software-properties-common 
 curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 sudo apt install nodejs
 node -v
 npm -v
 echo "→ Node.JS 16 wurde erfolgreich Installiert!"
-elif [ $number -eq 10 ]; then
+elif [ $number -eq 11 ]; then
 apt update
 apt upgrade -y
 apt install nginx
@@ -112,7 +121,7 @@ sudo apt install ufw
 ufw allow 'Nginx HTTP'
 ufw allow 'Nginx HTTPS'
 echo "→ Nginx Webserver wurde erfolgreich Installiert!"
-elif [ $number -eq 11 ]; then
+elif [ $number -eq 12 ]; then
 sudo apt update
 sudo apt install ca-certificates curl gnupg lsb-release
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -121,6 +130,6 @@ sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io
 sudo docker run hello-world
 echo "→ Docker wurde erfolgreich Installiert!"
-elif [ $number -eq 12 ]; then
+elif [ $number -eq 13 ]; then
 bash <(curl -s https://raw.githubusercontent.com/Kresu24-Einrichtung/Kresuinstaller/master/installations/minecraft.sh)
 fi
