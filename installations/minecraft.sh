@@ -30,19 +30,17 @@ echo "Installation wird ausgeführt, dies kann einen moment dauern! - Bitte beac
 sleep 5
 wget "https://launcher.mojang.com/v1/objects/3cf24a8694aca6267883b17d934efacc5e44440d/server.jar"
 echo "eula=true">> eula.txt
-echo "java -Xmx1024M -Xms1024M -jar server.jar nogui">> start.sh
+echo "screen -S Server java -Xmx1024M -Xms1024M -jar server.jar nogui">> start.sh
 chmod 777 start.sh
-screen -S Server
-./start.sh
+bash start.sh
 echo "Installation abgeschlossen!"
 elif [ $number -eq 2 ]; then
 echo "Installation wird ausgeführt, dies kann einen moment dauern! - Bitte beachte das die Installation in dem Verzeichnis sein muss!"
 sleep 5
 wget "https://download.getbukkit.org/spigot/spigot-1.18.jar"
 echo "eula=true">> eula.txt
-echo "java -Xmx1024M -Xms1024M -jar spigot-1.18.jar nogui">> start.sh
+echo "screen -S Server java -Xmx1024M -Xms1024M -jar spigot-1.18.jar nogui">> start.sh
 chmod 777 start.sh
-screen -S Server
-./start.sh
+bash start.sh
 echo "Installation abgeschlossen!"
 fi
