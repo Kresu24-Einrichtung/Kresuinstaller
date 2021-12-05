@@ -17,8 +17,8 @@ fi
 #Functions
 
 check_if_dir() {
-    echo -n "→ Bitte gebe ein Verzeichnis an:"
-    read -r ndir
+    echo "→ Bitte gebe ein Verzeichnis an:"
+    read ndir
     if [ -d "$ndir" ]; then
         echo "Verzeichnis gefunden!"
     else
