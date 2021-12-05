@@ -14,6 +14,8 @@ if ! [ -x "$(command -v curl)" ]; then
   exit 1
 fi
 
+apt install toilet
+toilet -f mono12 -F metal Kresu
 echo "
 ██╗░░██╗██████╗░███████╗░██████╗██╗░░░██╗
 ██║░██╔╝██╔══██╗██╔════╝██╔════╝██║░░░██║
