@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#https://raw.githubusercontent.com/Kresu24-Einrichtung/Kresuinstaller/master/installer.sh
+#bash <(curl -s https://raw.githubusercontent.com/Kresu24-Einrichtung/Kresuinstaller/master/installer.sh)
+
 if [[ $EUID -ne 0 ]]; then
   echo "→ Dieser Installer muss mit root oder sudo rechten ausgeführt werden!" 1>&2
   exit 1
@@ -24,6 +27,7 @@ echo "[8] - Installation von Java 16"
 echo "[9] - Installation von Node.JS 16"
 echo "[10] - Installation von Nginx Webserver"
 echo "[11] - Installation von Docker - Nesting muss Aktiv sein!"
+echo "[12] - Installation Minecraft Server 1.18 Vanilla"
 
 read number
 if [ $number -eq 1 ]; then
