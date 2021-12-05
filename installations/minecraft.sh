@@ -43,7 +43,6 @@ echo "Installation wird ausgeführt, dies kann einen moment dauern!"
 sleep 5
 check_if_dir()
 apt install openjdk-16-jre -y
-java -version
 cd $ndir
 wget https://launcher.mojang.com/v1/objects/3cf24a8694aca6267883b17d934efacc5e44440d/server.jar
 echo "eule=true">> eula.txt
