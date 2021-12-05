@@ -131,8 +131,11 @@ apt upgrade -y
 apt install nginx
 systemctl status nginx
 sudo apt install ufw
-ufw allow 'Nginx HTTP'
-ufw allow 'Nginx HTTPS'
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow 22
+sudo ufw allow 'Nginx FULL'
+sudo ufw enable
 echo "→ Nginx Webserver wurde erfolgreich Installiert!"
 elif [ $number -eq 12 ]; then
 sudo apt update
