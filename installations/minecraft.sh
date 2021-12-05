@@ -27,12 +27,13 @@ echo "Installation wird ausgeführt, dies kann einen moment dauern!"
 sleep 5
 echo "→ Bitte gebe das Verzeichnis an!"
 read ndir
-if [ -d "$ndir" ]; then
-if ! [ -x "$(command java -v)" ]; then
-    apt install openjdk-16-jre -y
-    java -version
-    echo "→ Java 16 wurde erfolgreich Installiert! Bitte starte die Installation neu!"
-    exit 1
+elif [ -d "$ndir" ]; then
+    if ! [ -x "$(command java -v)" ]; then
+        apt install openjdk-16-jre -y
+        java -version
+        echo "→ Java 16 wurde erfolgreich Installiert! Bitte starte die Installation neu!"
+        exit 1
+    fi
 else
 cd $ndir
 wget https://launcher.mojang.com/v1/objects/3cf24a8694aca6267883b17d934efacc5e44440d/server.jar
