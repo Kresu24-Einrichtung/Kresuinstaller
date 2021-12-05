@@ -21,11 +21,12 @@ check_if_dir() {
     read DEST
     if [ -d "$DEST" ]; then 
         if [ -L "$DEST" ]; then
-            # It is a symbolic links #
-            echo "Symbolic link found and doing something on it ..."
+            echo "Dies ist kein Verzeichnis!"
+            exit 1
         else
             # It is a directory #
-            echo "Directory found and doing nothing here ..."
+            echo "Verzeichnis gefunden!"
+            cd $DEST
         fi
     fi
 }
