@@ -24,7 +24,7 @@ echo "[5] - Installation von Apache 2 - Nesting nicht aktiv!"
 echo "[6] - Installation von Apache 2 - Nesting aktiv!"
 echo "[7] - Installation von Java 8"
 echo "[8] - Installation von Java 16"
-echo "[9] - Installation von Java 18"
+echo "[9] - Installation von Java 17"
 echo "[10] - Installation von Node.JS 16"
 echo "[11] - Installation von Nginx Webserver"
 echo "[12] - Installation von Docker - Nesting muss Aktiv sein!"
@@ -102,8 +102,8 @@ sudo apt install apt-transport-https ca-certificates wget dirmngr gnupg software
 wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
 sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
 sudo apt update
-sudo apt install adoptopenjdk-18-hotspot
-echo "→ Java 18 wurde erfolgreich Installiert!"
+sudo apt install openjdk-17-jdk
+echo "→ Java 17 wurde erfolgreich Installiert!"
 elif [ $number -eq 10 ]; then
 sudo apt update
 sudo apt install curl software-properties-common 
