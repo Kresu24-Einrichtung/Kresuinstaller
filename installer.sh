@@ -27,7 +27,7 @@ echo "[8] - Installation von Java 16"
 echo "[9] - Installation von Node.JS 16"
 echo "[10] - Installation von Nginx Webserver"
 echo "[11] - Installation von Docker - Nesting muss Aktiv sein!"
-echo "[12] - Installation Minecraft Server 1.18 Vanilla"
+echo "[12] - Minecraft Server Installer"
 
 read number
 if [ $number -eq 1 ]; then
