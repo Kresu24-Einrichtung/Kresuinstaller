@@ -17,6 +17,12 @@ fi
 #Functions
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+apt install toilet
+toilet -f mono12 -F metal Kresu
+
+echo ""
+
+echo ""
 echo "Minecraft Server Installer:"
 
 echo "[1] - Minecraft Vanilla 1.18"
