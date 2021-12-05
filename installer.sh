@@ -16,6 +16,7 @@ fi
 
 apt install toilet
 toilet -f mono12 -F metal Kresu
+echo ""
 echo "
 ██╗░░██╗██████╗░███████╗░██████╗██╗░░░██╗
 ██║░██╔╝██╔══██╗██╔════╝██╔════╝██║░░░██║
