@@ -23,18 +23,12 @@ echo "
 ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚═════╝░░╚═════╝░"
 
 echo ""
-echo "
-╔╗╔═╗
-║║║╔╝
-║╚╝╝╔═╦══╦══╦╗╔╗
-║╔╗║║╔╣║═╣══╣║║║
-║║║╚╣║║║═╬══║╚╝║
-╚╝╚═╩╝╚══╩══╩══╝"
+
 echo ""
 
 
 echo "Bitte wähle aus was du machen möchtest:"
-
+echo ""
 echo "[1] - Grundinstallation"
 echo "[2] - Pterodactyl Installation"
 echo "[3] - Installation von PHP 7.4"
