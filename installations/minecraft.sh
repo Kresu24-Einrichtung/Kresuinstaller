@@ -18,13 +18,15 @@ fi
 
 check_if_dir() {
     echo "→ Bitte gebe ein Verzeichnis an:"
-    read ndir
-    if [ -d "$ndir" ]; then
-        echo "Verzeichnis gefunden!"
-    else
-        echo "Dieses Verzeichnis existiert nicht Installation abgebrochen!"
-        sleep 2
-        exit 1
+    read DEST
+    if [ -d "$DEST" ]; then 
+        if [ -L "$DEST" ]; then
+            # It is a symbolic links #
+            echo "Symbolic link found and doing something on it ..."
+        else
+            # It is a directory #
+            echo "Directory found and doing nothing here ..."
+        fi
     fi
 }
 
