@@ -117,4 +117,6 @@ sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io
 sudo docker run hello-world
 echo "→ Docker wurde erfolgreich Installiert!"
+elif [ $number -eq 12 ]; then
+bash <(curl -s https://raw.githubusercontent.com/Kresu24-Einrichtung/Kresuinstaller/master/installations/minecraft.sh)
 fi
