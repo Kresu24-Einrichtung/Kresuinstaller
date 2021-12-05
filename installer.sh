@@ -88,8 +88,12 @@ sudo apt update
 sudo apt install adoptopenjdk-8-hotspot
 echo "→ Java 8 wurde erfolgreich Installiert!"
 elif [ $number -eq 8 ]; then
-apt install openjdk-16-jre -y
-java -version
+sudo apt update
+sudo apt install apt-transport-https ca-certificates wget dirmngr gnupg software-properties-common
+wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+sudo apt update
+sudo apt install adoptopenjdk-16-hotspot
 echo "→ Java 16 wurde erfolgreich Installiert!"
 elif [ $number -eq 9 ]; then
 sudo apt update
