@@ -31,7 +31,7 @@ elif ! [ -d "$ndir" ]; then
 echo "Dieses Verzeichnis existiert nicht Installation abgebrochen!"
 exit 1
 elif [ -d "$ndir" ]; then
-elif ! [ -n `which java` ]; then
+elif ! [ java -version 2>&1 >/dev/null | grep "java version\|openjdk version" ]; then
     apt install openjdk-16-jre -y
     java -version
     echo "→ Java 16 wurde erfolgreich Installiert! Bitte starte die Installation neu!"
